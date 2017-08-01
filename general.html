@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p.big {
+line-height: 200%;
+background-color:powderblue;
+}
+div.vs {
+  background-color: white;
+  width: 800px;
+  border: 40px;
+}
+fieldset {
+background-color: #FFC100;
+border-color: white;
+
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="generalinfo.css">
+</head>
+<body>
+<center>
+<h2>General Information About Bees</h2>
+</center>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 5</div>
+  <img src="bee1.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 5</div>
+  <img src="bee2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 5</div>
+  <img src="bee3.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 5</div>
+  <img src="bee4.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 5</div>
+  <img src="bee5.jpg" style="width:100%">
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+<fieldset>
+<p class="big">
+   <ul style="list-style-type:square">
+     <li>There are about 20,000 different species of bees in the world.</li><br>
+     <br>
+     <li>Honeybees are responsible for pollinating approx 80% of all fruit,
+       vegetable and seed crops in the U.S.</li><br><br>
+     <li>Bees are the only insect in the world that make
+       food that humans can eat.</li><br><br>
+       <li>All the bees have to work together for the colony to survive,
+         no one bee can survive by itself.</li><br><br>
+   </ul>
+</p>
+</fieldset>
+
+
+<table>
+   <tr>
+ <td><img src="bee123.jpg" alt="Mountain View" style="width:800px;"></td>
+       <td>
+         <div class= "vs">
+         Bees live in colonies that contain the queen bee, the worker bee and
+         the drone.  Worker bees clean the hive, collecting pollen and nectar
+         to feed the colony and they take care
+         of the offspring. The drone’s only job is to mate with the queen.
+         The queen’s only job is to lay eggs.</div>
+       </td>
+
+     </tr>
+     <tr>
+       <table>
+           <tr>
+         <td>
+           <div class= "vs">
+         Bees see all colors except the color red. That and their sense of
+         smell help them find the flowers they need to collect pollen.
+         Not only is pollen a food source for bees, but also some of the pollen
+          is dropped in flight, resulting in cross pollination.
+        </div>
+        </td>
+       <td><img src="yellow.jpg" alt="Mountain View" style="width:800px;"</td>
+     </tr>
+
+
+   </table>
+
+
+
+</body>
+</html>
