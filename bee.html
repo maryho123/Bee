@@ -5,28 +5,49 @@
         <title>The Bee Effect</title>
         <link rel="stylesheet" type="text/css" href="bee.css">
         <script src="bee.js"></script>
+<style>
+
+div.laptop-wrapper {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 67.5%;
+    height: 0;
+}
+div.laptop-wrapper iframe {
+    box-sizing: border-box;
+    background: url(https://c1.staticflickr.com/4/3079/2747201062_4a9890983f_b.jpg) center center no-repeat;
+    background-size: contain;
+    padding: 11.9% 15.5% 14.8%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+</style>
+
       </head>
   <body>
+
   <center>
     <h1> Home </h1>
   </center>
-    <div class="dropdown">
-      <button class="dropbtn">≡</button>
-      <div class="dropdown-content">
-        <a href="bee.html">Home</a>
-        <a href="general.html">Overview on Bees</a>
-        <a href="#">Issues</a>
-        <a href="causes.html">Causes</a>
-        <a href="impacts.html">Impacts</a>
-        <a href="#">Game</a>
-        </div>
+  <div class="dropdown">
+    <button class="dropbtn">≡</button>
+    <div class="dropdown-content">
+      <a href="bee.html">Home</a>
+      <a href="general.html">Overview on Bees</a>
+      <a href="issues.html">Statistics</a>
+      <a href="causes.html">Causes</a>
+      <a href="impacts.html">Impacts</a>
+      <a href="#">Game</a>
       </div>
-    <video id="player" class="video-js vjs-default-skin" controls autoplay="t" preload="auto" width="1880px" height="980px"
-    poster="FF7.png"
-    data-setup="{}">
-  <source src="BEE.mp4" type='video/mp4' />
-  <track kind="subtitles" src="FF7.vtt" srclang="en" label="Svenska"></track>
-   </video>
-  </body>
-  <p> Video by "Kurzgesagt – In a Nutshell" </P>
+    </div>
+    <video controls=""  width="100%">
+        <source src="BEE.mp4" type="video/mp4" />
+      </video>
+          </body>
+  <p> Video by "FlowHive" </P>
 </html>

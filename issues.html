@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <title>Issues</title>
+  <link rel="stylesheet" type="text/css" href"issues.css" media="screen">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+  <div class="w3-container">
+
+  <center>  <h2>Statistics</h2> </center>
+
+      <p> 21% of all bee were lost between 2011-2012 </p>
+        <div class="w3-light-grey">
+        <div class="w3-orange" style="height:20px;width:21%"></div>
+        </div><br>
+
+    <p> 24% of all bee were lost between 2013-2014 </p>
+        <div class="w3-light-grey">
+          <div class="w3-orange" style="height:20px;width:23%"></div>
+      </div><br>
+
+    <p> 44% of bees was lost between 2015-2016 </p>
+      <div class="w3-light-grey">
+      <div class="w3-orange" style="height:20px;width:44%"></div>
+    </div>
+  </div><br>
+
+
+ <center><p> If all <em>insects and arthropds</em> on Earth suddenly died, with in 50 years all life on earth would perish.
+  If all <em>humans</em> suddenly died,<p> within 50 years all life would flourish."<p> - Nature Quotes </p></center><br>
+  <img src="https://beeinformed.org/wp-content/uploads/2015/05/lossmap2015-680x464.png"
+    alt="Bee Lose America" style="width:675px;height:542px;" align= "right">
+
+
+<div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Radation', 10],
+  ['Parisites', 40],
+  ['Pesticides', 35],
+  ['Climate Change', 15],
+
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Leading Causes In the Unnatural Death of Bees', 'width':650, 'height':500};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+  </script>
+</html>
+
+
+</body>
+</html>

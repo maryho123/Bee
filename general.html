@@ -4,17 +4,45 @@
 <style>
 p.big {
 line-height: 200%;
-background-color:powderblue;
 }
 div.vs {
   background-color: white;
-  width: 800px;
-  border: 40px;
+  width: 620px;
+  line-height: 200%;
+
 }
 fieldset {
 background-color: #FFC100;
 border-color: white;
 
+}
+img.yellow {
+
+  position: relative;
+      left: 80px;
+
+
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: sans-serif;
+  height: 100%;
+}
+.hidden {
+  overflow-x: hidden;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2em;
+  background: white;
+}
+header {
+  margin: 0 -500%;
+  padding: 0.5em 500%;
+  background: #E8AB18;
 }
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,7 +111,9 @@ function showSlides() {
     setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 </script>
-<fieldset>
+<div class="hidden">
+  <div class="wrapper">
+    <header>
 <p class="big">
    <ul style="list-style-type:square">
      <li>There are about 20,000 different species of bees in the world.</li><br>
@@ -96,19 +126,17 @@ function showSlides() {
          no one bee can survive by itself.</li><br><br>
    </ul>
 </p>
-</fieldset>
-
-
+</div>
 <table>
    <tr>
- <td><img src="bee123.jpg" alt="Mountain View" style="width:800px;"></td>
+ <td><img src="bee123.jpg" alt="Mountain View" style="width:700px;"></td>
        <td>
-         <div class= "vs">
+         <div class= "vs" align="center" style="border:1px solid white">
          Bees live in colonies that contain the queen bee, the worker bee and
-         the drone.  Worker bees clean the hive, collecting pollen and nectar
+         the drone. <em>Worker bees</em> clean the hive, collecting pollen and nectar
          to feed the colony and they take care
-         of the offspring. The drone’s only job is to mate with the queen.
-         The queen’s only job is to lay eggs.</div>
+         of the offspring. The <em>drone’s </em>only job is to mate with the queen.
+         The <em>queen’s</em> only job is to lay eggs.</div>
        </td>
 
      </tr>
@@ -116,14 +144,14 @@ function showSlides() {
        <table>
            <tr>
          <td>
-           <div class= "vs">
+           <div class= "vs" align="center" style="border:1px solid white">
          Bees see all colors except the color red. That and their sense of
          smell help them find the flowers they need to collect pollen.
          Not only is pollen a food source for bees, but also some of the pollen
           is dropped in flight, resulting in cross pollination.
         </div>
         </td>
-       <td><img src="yellow.jpg" alt="Mountain View" style="width:800px;"</td>
+       <td><img class= "yellow" src="yellow.jpg" alt="Mountain View" style="width:700px;"</td>
      </tr>
 
 
