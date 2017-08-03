@@ -9,17 +9,27 @@
   </head>
 
  <body>
-   <div class="dropdown">
-     <button class="dropbtn">≡</button>
-     <div class="dropdown-content">
-       <a href="bee.html">Home</a>
-       <a href="general.html">Overview on Bees</a>
-       <a href="issues.html">Statistics</a>
-       <a href="causes.html">Causes</a>
-       <a href="impacts.html">Impacts</a>
-       <a href="#">Game</a>
-       </div>
+   <div id="myNav" class="overlay">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+     <div class="overlay-content">
+     <a href="bee.html">Home</a>
+     <a href="general.html">Overview on Bees</a>
+     <a href="issues.html">Statistics</a>
+     <a href="causes.html">Causes</a>
+     <a href="impacts.html">Impacts</a>
+     <a href="game.html">Game</a>
      </div>
+   </div>
+ <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+ <script>
+ function openNav() {
+   document.getElementById("myNav").style.width = "100%";
+ }
+
+ function closeNav() {
+   document.getElementById("myNav").style.width = "0%";
+ }
+ </script>
 
     <table>
       <tr>
@@ -29,7 +39,7 @@
         </tr>
         <tr>
           <td>
-            <center><h4>What is happening due to the drop in the Honey Bee population?</h4> </center>
+            <center><h4>The effects of the decline in the Honey Bee population on the World</h4> </center>
           </td>
         </tr>
     </table>

@@ -1,15 +1,12 @@
-@import 'https://fonts.googleapis.com/css?family=Bitter:400,700';
-
-* {
-  box-sizing: border-box;
-}
 
 body{
 	background-image:url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2216%22%20height=%2216%22%20viewBox=%220%200%2016%2016%22%3E%3Cg%20fill=%22#84c6ad%22%3E%3Cpolygon%20points=%2212%200%200%2012%200%2016%2016%200%22/%3E%3Cpolygon%20points=%2212%2016%2016%2016%2016%2012%22/%3E%3Cpolygon%20points=%220%204%200%208%208%200%204%200%22/%3E%3Cpolygon%20points=%2216%208%2016%204%204%2016%208%2016%22/%3E%3C/g%3E%3C/svg%3E');
 	background-color:#7ed5be;
-  font-family: verdana;
-	line-height: 1;
-}
+
+
+    font-family: "Palatino";
+
+  }	
 
 .hangman-letters div {
       background: white;

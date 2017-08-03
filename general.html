@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" type="text/css" href="bee.css">
 <style>
 p.big {
 line-height: 200%;
@@ -49,19 +50,29 @@ header {
 <link rel="stylesheet" type="text/css" href="generalinfo.css">
 </head>
 <body>
-<div class="dropdown">
-  <button class="dropbtn">≡</button>
-  <div class="dropdown-content">
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
     <a href="bee.html">Home</a>
     <a href="general.html">Overview on Bees</a>
     <a href="issues.html">Statistics</a>
     <a href="causes.html">Causes</a>
     <a href="impacts.html">Impacts</a>
-    <a href="#">Game</a>
+    <a href="game.html">Game</a>
     </div>
   </div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
   <center>
-  <h2>General Information About Bees</h2>
+  <h1>General Information About Bees</h1>
   </center>
 
 <div class="slideshow-container">
@@ -130,11 +141,12 @@ function showSlides() {
      <li>There are about 20,000 different species of bees in the world.</li><br>
      <br>
      <li>Honeybees are responsible for pollinating approx 80% of all fruit,
-       vegetable and seed crops in the U.S.</li><br><br>
+       vegetables and seed crops in the U.S.</li><br><br>
      <li>Bees are the only insect in the world that make
        food that humans can eat.</li><br><br>
-       <li>All the bees have to work together for the colony to survive,
-         no one bee can survive by itself.</li><br><br>
+       <li>All the bees have to work together for the colony in order for them to survive,
+         no bee can survive alone.
+      .</li><br><br>
    </ul>
 </p>
 </div>
@@ -156,7 +168,7 @@ function showSlides() {
            <tr>
          <td>
            <div class= "vs" align="center" style="border:1px solid white">
-         Bees see all colors except the color red. That and their sense of
+         Bees see all colors except red. That and their sense of
          smell help them find the flowers they need to collect pollen.
          Not only is pollen a food source for bees, but also some of the pollen
           is dropped in flight, resulting in cross pollination.

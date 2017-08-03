@@ -6,23 +6,25 @@
         <link rel="stylesheet" type="text/css" href="bee.css">
         <script src="bee.js"></script>
 <style>
-
-div.laptop-wrapper {
-    position: relative;
-    padding-top: 25px;
-    padding-bottom: 67.5%;
-    height: 0;
+html, body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  height: 10%;
 }
-div.laptop-wrapper iframe {
-    box-sizing: border-box;
-    background: url(https://c1.staticflickr.com/4/3079/2747201062_4a9890983f_b.jpg) center center no-repeat;
-    background-size: contain;
-    padding: 11.9% 15.5% 14.8%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.hidden {
+  overflow-x: hidden;
+}
+.wrapper {
+  max-width: 960px;
+  max-height: 20px;
+  margin: 0 auto;
+  background: white;
+}
+header {
+  margin: 0 -500%;
+  padding: 0.5em 500%;
+  background: #E8AB18;
 }
 
 
@@ -30,23 +32,45 @@ div.laptop-wrapper iframe {
 
       </head>
   <body>
-  <div class="dropdown">
-    <button class="dropbtn">≡</button>
-    <div class="dropdown-content">
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
       <a href="bee.html">Home</a>
       <a href="general.html">Overview on Bees</a>
       <a href="issues.html">Statistics</a>
       <a href="causes.html">Causes</a>
       <a href="impacts.html">Impacts</a>
-      <a href="#">Game</a>
+      <a href="game.html">Game</a>
       </div>
     </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  <script>
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+</script>
       <center>
         <h1> Home </h1>
       </center>
+      <div class="hidden">
+        <div class="wrapper">
+          <header>
+                <h6> Hello <h2>
+</div>
+</div>
     <video controls autoplay=""  width="100%">
         <source src="BEE.mp4" type="video/mp4" />
       </video>
+      <div class="hidden">
+        <div class="wrapper">
+          <header>
+                <h6> Hello <h2>
+</div>
+</div>
           </body>
-  <p> Video by "FlowHive" </P>
+  <p> Video by "FlowHive" </p>
 </html>

@@ -2,8 +2,41 @@
 <html>
   <head>
     <title>Statistics</title>
+    <link rel="stylesheet" type="text/css" href="bee.css">
 
     <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: white;
+      font-family: "Palatino";
+      height: 100%;
+    }
+    .hidden {
+      overflow-x: hidden;
+    }
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2em;
+      background: white;
+    }
+    header {
+      margin: 0 -500%;
+      padding: 0.5em 500%;
+      background: #FEDE1E;
+    }
+    fieldset {
+    border-color: white;
+    border-style: hidden;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+
+    border: 2px groove (internal value);
+}
 #myProgress {
   width: 60%;
   background-color: #ddd;
@@ -12,7 +45,7 @@
 #myBar {
   width: 0%;
   height: 50px;
-  background-color: #FFC100;
+  background-color: #0D5D9B;
   text-align: center;
  line-height: 50px;
  color: white;
@@ -25,7 +58,7 @@
 #myBar2 {
   width: 0%;
   height: 50px;
-  background-color: #FFC100;
+  background-color: #0D5D9B;
   text-align: center;
  line-height: 50px;
  color: white;
@@ -38,13 +71,14 @@
 #myBar3 {
   width: 0%;
   height: 50px;
-  background-color: #FFC100;
+  background-color: #0D5D9B;
   text-align: center;
  line-height: 50px;
  color: white;
 }
-button {
+#first {
     background-color: #FF003A;
+    font-family: "Palatino";
     border: none;
     color: white;
     padding: 15px 22px;
@@ -56,51 +90,52 @@ button {
      left: 400px;
 
 }
-.basic-brackets {
-  position: relative;
-  height: 200px;
-  width: 500px;
-  margin: 50px auto 0;
+#second {
+    background-color: #FF003A;
+    border: none;
+    font-family: "Palatino";
+    color: white;
+    padding: 15px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    position:relative;
+     left: 400px;
+
 }
-
-  &:before {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    border-left: 30px solid #666;
-    border-top: 30px solid #666;
-    border-bottom: 30px solid #666;
-    padding: 0px 15px;
-  }
-  &:after {
-    content:" ";
-    padding: 0px 15px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-right: 30px solid #666;
-    border-top: 30px solid #666;
-    border-bottom: 30px solid #666;
-  }
-  p.asdf {
-      padding: 30px 90px;
-
-    }
-
 
 
 </style>
   </head>
   <body>
-    <center>  <h2>Statistics</h2> </center>
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+      <a href="bee.html">Home</a>
+      <a href="general.html">Overview on Bees</a>
+      <a href="issues.html">Statistics</a>
+      <a href="causes.html">Causes</a>
+      <a href="impacts.html">Impacts</a>
+      <a href="game.html">Game</a>
+      </div>
+    </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  <script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+    <center>  <h1>Statistics</h1> </center>
 <p style="width: 500px;">
     <div id="myProgress"style="float: left;">
       <div id="myBar">21%</div>
     </div>
-&emsp;of all bee were lost between 2011-2012</p>
+&emsp;of all Bees were lost between 2011-2012</p>
     <br>
   <button id= "first" onclick="move()">Click Me</button>
 
@@ -124,7 +159,7 @@ button {
         <div id="myProgress2"style="float: left;">
           <div id="myBar2">24%</div>
         </div>
-    &emsp;of all bee were lost between 2013-2014</p>
+    &emsp;of all Bees were lost between 2013-2014</p>
         <br>
         <button id= "second" onclick="second()">Click Me</button>
 
@@ -147,9 +182,9 @@ button {
             <div id="myProgress3"style="float: left;">
               <div id="myBar3">44%</div>
             </div>
-        &emsp;of bees was lost between 2015-2016</p>
+        &emsp;of Bees were lost between 2015-2016</p>
             <br>
-            <button id= "second" onclick="third()">Click Me</button>
+            <button id= "second" onclick="third()">Click Me</button><br>
 
             <script>
             function third() {
@@ -167,11 +202,15 @@ button {
             }
             </script>
 <br>
-              <p class= "basic-brackets">If all <em>insects and arthropds</em> on Earth suddenly died, with in 50 years all life on earth would perish.
-             If all <em>humans</em> suddenly died, within 50 years all life would flourish."- Nature Quotes
-             <p class= "brackets-using-mixin">
-
-
+  <div class="hidden">
+    <div class="wrapper">
+      <header>
+        <center><h3>"If all <em>insects and arthropds</em> on Earth suddenly died, <br/>
+          with in 50 years all life on earth would perish.<br/>
+             If all <em>humans</em> suddenly died, within 50 years all life would flourish."<br/>
+             - Nature Quotes</h3></center>
+             </div>
+           </div>
 
            <img src="https://beeinformed.org/wp-content/uploads/2015/05/lossmap2015-680x464.png"
              alt="Bee Lose America" style="width:675px;height:542px;" align= "right">

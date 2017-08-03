@@ -12,17 +12,27 @@
       </style>
       </head>
   <body>
-    <div class="dropdown">
-      <button class="dropbtn">≡</button>
-      <div class="dropdown-content">
-        <a href="bee.html">Home</a>
-        <a href="general.html">Overview on Bees</a>
-        <a href="issues.html">Statistics</a>
-        <a href="causes.html">Causes</a>
-        <a href="impacts.html">Impacts</a>
-        <a href="#">Game</a>
-        </div>
-          </div>
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+      <a href="bee.html">Home</a>
+      <a href="general.html">Overview on Bees</a>
+      <a href="issues.html">Statistics</a>
+      <a href="causes.html">Causes</a>
+      <a href="impacts.html">Impacts</a>
+      <a href="game.html">Game</a>
+      </div>
+    </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  <script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
 
         <center> <h1> What's causing the honey bee population to drop? </h1>
           <h6> Click images to get infromation! </h12></center> <br>
@@ -79,7 +89,7 @@
           <div class="middle">
             <div class="text">The increased use of <em>neonicotinoids</em>, a specific chemical pesticide has led to the decline of bees.
               When Honey bees are exposed to lethal levels of the toxin they will experience problems with flight and navigation, this
-              also causes the Queen bee to become infertile. Unable to fly the bees are unable to return back to their hive. </div>
+              also causes the Queen bee to become infertile. Unable to fly, the bees are unable to return back to their hive. </div>
           </div>
           </div>
           <br>
@@ -132,7 +142,7 @@
         <div class="middle">
           <div class="text">	Recent studies have found that bees are affected by <em>atmospheric electromagnetic radiation</em>
             as a result of growing number of cell phones and wireless communication towers. The signal from cell phones not
-            only confuses the bees but may lead to their death.
+            only confuses the bees but often leads to their death.
         </div>
         </div>
         </div>
