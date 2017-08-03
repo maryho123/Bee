@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bee Game</title>
+    <link rel="stylesheet" type="text/css" href="game.css">
+  </head>
+  <body>
+    <h1>Bee Game</h1>
+
+    <div class="hangman">
+    	<div class="hangman-results">
+    		<div class="hangman-hangman">
+    			<svg id="hangman-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 400 500" stroke="#000000" fill="none">
+    				<polyline stroke-width="10" stroke-miterlimit="10" points="253.996,142.899 253.996,59.666
+    																																	 115.663,59.666 115.663,434.999 "/>
+    				<line stroke-width="10" stroke-miterlimit="10" x1="392.33" y1="434.999" x2="8.33" y2="434.999"/>
+    				<g id="added-parts">
+    				</g>
+    			</svg>
+    		</div>
+    		<div class="game-over" style="display: none;">
+    			<p class="game-over-won">You won! :)</p>
+    			<p class="game-over-lost">You lost :(</p>
+    			<button id="game-over-replay">Start Over</button>
+    		</div>
+    	</div>
+    	<div class="hangman-puzzle">
+    	</div>
+    	<div class="hangman-letters">
+    	</div>
+    </div>
+  </body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="game.js"></script>
+</html>

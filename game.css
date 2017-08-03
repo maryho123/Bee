@@ -1,0 +1,178 @@
+@import 'https://fonts.googleapis.com/css?family=Bitter:400,700';
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+	background-image:url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2216%22%20height=%2216%22%20viewBox=%220%200%2016%2016%22%3E%3Cg%20fill=%22#84c6ad%22%3E%3Cpolygon%20points=%2212%200%200%2012%200%2016%2016%200%22/%3E%3Cpolygon%20points=%2212%2016%2016%2016%2016%2012%22/%3E%3Cpolygon%20points=%220%204%200%208%208%200%204%200%22/%3E%3Cpolygon%20points=%2216%208%2016%204%204%2016%208%2016%22/%3E%3C/g%3E%3C/svg%3E');
+	background-color:#7ed5be;
+  font-family: verdana;
+	line-height: 1;
+}
+
+.hangman-letters div {
+      background: white;
+      box-shadow:2px 2px 1px rgb(83, 84, 89);
+      display: inline-block;
+			padding: 8px 16px 10px;
+			margin: 3px;
+      font-weight: bold;
+      font-size: 26px;
+      cursor: pointer;
+      position: relative;
+			transition: .2s;
+	    border-radius: 3px
+}
+
+.hangman-letters div:hover {
+    background: #ddd;
+  }
+.hangman {
+  max-width: 500px;
+	width: 90%;
+  margin: 15px auto;
+  display: flex;
+  flex-direction: column;
+	text-align: center;
+	justify-content: center;
+}
+.disabled {
+  color: #888;
+  background: #ccc;
+  cursor: default;
+  pointer-events: none;
+   &:before {
+    content: "\002716";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: normal;
+    font-size: 32px;
+    color: #992020;
+  }
+
+
+
+
+.disabled .correct {
+  background: #42f450;
+}
+.disabled.correct::before {
+    color: #298772;
+    content: '\002714';
+  }
+
+.hangman-puzzle {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hangman-puzzle-letters {
+  padding: 8px 16px 10px;
+  margin: 4px;
+  border-bottom: 2px black;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  width: 30px;
+  flex: 1 auto;
+  padding-bottom: 3px;
+}
+
+.hangman-results {
+  text-align: center;
+  position: relative;
+}
+
+
+/*refactor code below*/
+
+
+
+
+
+      &.correct {
+        background: #42f450;
+        &:before {
+          color: #298772;
+          content: '\002714';
+        }
+      }
+    }
+
+  }
+  &-puzzle {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+		flex-wrap: wrap;
+    &-letters {
+      display: inline-block;
+			padding: 8px 16px 10px;
+			margin: 4px;
+      border-bottom: 2px solid black;
+      height: 50px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px;
+      width: 30px;
+      flex: 1 auto;
+			padding-bottom: 3px;
+			&.space {
+				border: 0;
+			}
+			&.game-lost {
+				color: darken(#42f450, 50%);
+			}
+
+    }
+  }
+	&-results {
+		text-align: center;
+		position: relative;
+		.game-over {
+			position: absolute;
+			top: 50%; left: 50%; transform: translate(-50%, -50%);
+			padding: 60px 20px;
+			width: 100%;
+			max-width: 400px;
+			background: rgba(#42f450, .95);
+
+			p {
+				font-size: 32px;
+				font-weight: bold;
+			}
+			button {
+				background: darken(#42f450, 30%);
+				color: white;
+				padding: 20px 30px;
+				font-size: 32px;
+				font-family: verdana;
+				border: 0;
+				cursor: pointer;
+				transition: .2s;
+				&:hover {
+					background: darken(#42f450, 15%);
+				}
+			}
+
+		}
+	}
+	&-hangman {
+		max-width: 400px;
+		margin: 0 auto;
+		@media(max-width: 640px) {
+			padding: 0 50px;
+		}
+	}
+	&-svg {
+		width: 100%;
+		height: auto;
+	}
+
+}

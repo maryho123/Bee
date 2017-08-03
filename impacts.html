@@ -1,73 +1,103 @@
 <!DOCTYPE html>
-
 <html>
-      <head>
-        <title>The Bee Effect</title>
-        <link rel="stylesheet" type="text/css" href="impacts.css">
-        <script src="bee.js"></script>
+  <head>
+    <title> The Bee Effect </title>
+    <link rel="stylesheet" type="text/css" href="impacts.css">
+    <link rel="stylesheet" type="text/css" href="bee.css">
+    <script src="impacts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-      </head>
-  <style>
-      table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-      }
+ <body>
+   <div class="dropdown">
+     <button class="dropbtn">≡</button>
+     <div class="dropdown-content">
+       <a href="bee.html">Home</a>
+       <a href="general.html">Overview on Bees</a>
+       <a href="issues.html">Statistics</a>
+       <a href="causes.html">Causes</a>
+       <a href="impacts.html">Impacts</a>
+       <a href="#">Game</a>
+       </div>
+     </div>
 
-      td, th {
-          border: none;
-          text-align: left;
-          padding: 8px;
-      }
-  </style>
-
-  <body>
     <table>
       <tr>
           <th>
               <h1 align="center">Impacts</h1>
           </th>
-          <th>
-            <div class="dropdown">
-                <button class="dropbtn">≡</button>
-                <div class="dropdown-content">
-                  <a href="bee.html">Home</a>
-                  <a href="general.html">Overview on Bees</a>
-                  <a href="#">Issues</a>
-                  <a href="causes.html">Causes</a>
-                  <a href="impacts.html">Impacts</a>
-                  <a href="#">Game</a>
-                </div>
-            </div>
-          </th>
         </tr>
         <tr>
           <td>
-            <p>The decline of the amount of bees has lead to...</p>
+            <center><h4>What is happening due to the drop in the Honey Bee population?</h4> </center>
           </td>
         </tr>
     </table>
 
-    <div class="image">
+    <div class="slideshow-container">
 
-          <img src="https://img.huffingtonpost.com/asset/5703f9442e00002d009507ca.jpeg?ops=scalefit_970_noupscale"
-          alt="" height="1000" width="2000"/>
-
-          <h2><ul style= "list-style-type:none">
-            <li>Without bees, many corps are being </li>
-            <li>left to be hand- pollinated which is</li>
-            <li> labour- intensive, slow and expensive.</li>
-            <li> A famous quote by scientist, Albert Einstein,</li>
-            <li> states that if bees disappeared from the face of </li>
-            <li> Earth humanity would last no more than 4 years.</li>
-            <li> California’s almond orchards have been losing bees </li>
-            <li>and because of this, production levels have never been lower.</li>
-            <li> Pollinator dependent species beset many fruit, vegetable,</li>
-            <li>seed, nut and oil crops, all of which supply many vitamins,</li>
-            <li>minerals, and nutrients in the human diet.</li>
-            </ul></h2>
-
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="https://img.huffingtonpost.com/asset/5703f9491e0000870070644c.jpeg?cache=xfkfttudnw&ops=scalefit_970_noupscale" style="width:100%">
+      <div class="text">Without bees, many corps are being left to be hand- pollinated which is extremely labour- intensive, slow and expensive.</div>
     </div>
 
-</body>
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://img.huffingtonpost.com/asset/5703f93e1500002a000b4162.jpeg?ops=scalefit_970_noupscale" style="width:100%""length:80%">
+      <div class="text"> Pollinator dependent species beset many fruit, vegetable,
+          seed, nut and oil crops, all of which supply many vitamins, minerals, and nutrients in the human diet.
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="https://img.huffingtonpost.com/asset/5703f944150000ad000b4163.jpeg?ops=scalefit_970_noupscale" style="width:100%">
+      <div class="text">Albert Einstein, states that if bees disappeared from the face of Earth, humanity would last no more than 4 years</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+
+  </body>
 </html>
